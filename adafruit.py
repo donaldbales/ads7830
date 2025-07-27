@@ -19,5 +19,6 @@ chan = AnalogIn(adc, 0)
 
 while True:
     value = float(chan.value)
-    print(f"ADC channel 0 = {value}, {(value * 2.500) / 255.0}")
+    base = float(255 << 8)
+    print(f"ADC channel 0 = {value}, base = {base}, {(value * 2.500) / base}")
     time.sleep(1)

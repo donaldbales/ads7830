@@ -13,10 +13,11 @@ for i in range(8):
     analog_inputs.append(c)
 
 ref_vol = 2.5
+base = float(255 << 8)
 
 while True:
     for i in range(1):
         val = float(analog_inputs[i].value)
-        print(f"ADC input {i} = {val}, {((val * ref_vol) / 255.0) * 3.3/2.5}")
+        print(f"ADC input {i} = {val}, {((val * ref_vol) / base) * 3.3/2.5}")
     time.sleep(1)
 
