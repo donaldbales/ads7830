@@ -46,7 +46,7 @@ In the example code above, There's what I believe to be a mistake. The default v
 adc = ADC.ADS7830(i2c)
 ```
 
-This sets the bit PD1 in the command byte to 1, which turns on the internal 2.5V referencce voltage. But Vin, 3.3V from the I2C connection is already tied to it. The result? Inaccurate voltage readings.
+This sets the bit PD1 in the command byte to 1, which turns on the internal 2.5V reference voltage. But Vin, 3.3V from the I2C connection is already tied to it. The result? Inaccurate voltage readings.
 
 To get accurate voltage readings using the default Vin, 3.3V, reference voltage, I needed to pass int_ref_power_down=True to the initializer:
 
