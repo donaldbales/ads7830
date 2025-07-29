@@ -13,12 +13,10 @@ from adafruit_ads7830.analog_in import AnalogIn
 i2c = board.I2C()
 
 # Initialize ADS7830
-#adc = ADC.ADS7830(i2c, differential_mode=False, int_ref_power_down=False, adc_power_down=False)
-adc = ADC.ADS7830(i2c, 0x48, False, False, False)
+adc = ADC.ADS7830(i2c)
 chan = AnalogIn(adc, 0)
 
 while True:
-    value = float(chan.value)
-    base = float(255 << 8)
-    print(f"ADC channel 0 = {value}, base = {base}, {(value * 2.500) / base}")
-    time.sleep(1)
+    print(f"ADC channel 0 = {chan.value}")
+    time.sleep(0.1)
+
