@@ -13,7 +13,8 @@ from adafruit_ads7830.analog_in import AnalogIn
 i2c = board.I2C()
 
 # Initialize ADS7830
-adc = ADC.ADS7830(i2c)
+# adc = ADC.ADS7830(i2c) this does not work for the default 3.3V Vin reference voltage
+adc = ADC.ADS7830(i2c, 0x48, False, True)
 chan = AnalogIn(adc, 0)
 
 while True:
