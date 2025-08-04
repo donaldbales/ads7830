@@ -7,7 +7,7 @@ From there, you can find the tutorial at: https://learn.adafruit.com/adafruit-ad
 
 The data sheet for the ADS7830 can be found at: https://www.ti.com/lit/ds/symlink/ads7830.pdf
 
-I2C Addresses: *48* or 49 or 4A or 4B
+I2C Addresses: **48** or 49 or 4A or 4B
 
 Personaly, I found the product page and tutorial a bit vague about the reference voltage. Especially the example code:
 
